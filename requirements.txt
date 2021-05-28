@@ -1,0 +1,9 @@
+Flask-SQLAlchemy
+Flask-RESTful
+flask-marshmallow
+python-crontab==2.5.1
+flask-crontab
+marshmallow-sqlalchemy
+honcho==1.0.1
+apscheduler
+python-decouple==3.4

@@ -1,0 +1,16 @@
+version: '3.9'
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile #build the image for the web service from the dockerfile in parent directory
+    command: sh -c "python main.py"
+    volumes:
+      - .:/home/neos:rw # map data and files from parent directory in host to microservice directory in docker container
+    env_file:
+      - .env
+    image: neos
+    ports:
+      - 5000:5000
+    restart: "on-failure"
